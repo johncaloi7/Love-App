@@ -4,8 +4,8 @@
       >Find Me Love</a
     >
 
-    <ng-container *ngIf="accountService.currentUsers$ | async">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <ng-container *ngIf="accountService.currentUsers$ | async">
         <li class="nav-item">
           <a class="nav-link" routerLink="/members" routerLinkActive="active"
             >Matches</a
@@ -21,8 +21,13 @@
             >Messages</a
           >
         </li>
-      </ul>
-    </ng-container>
+      </ng-container>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/errors" routerLinkActive="active"
+          >Errors</a
+        >
+      </li>
+    </ul>
 
     <div
       *ngIf="accountService.currentUsers$ | async as user"

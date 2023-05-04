@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.accountService.register(this.model).subscribe({
       next: () => this.cancel(),
-      error: (error) => this.toastr.error(error.error),
+      error: (error) => this.toastr.error('all fields are required'),
     });
   }
 
