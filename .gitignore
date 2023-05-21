@@ -476,4 +476,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-/API/appsetting.json
+API/appsetting.json
+API/appsettings.Development.json
